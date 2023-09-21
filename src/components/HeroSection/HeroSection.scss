@@ -1,0 +1,131 @@
+.hero-section-parent {
+    .first-hr,.second-hr {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.18);
+      width: 100%;
+      opacity: 0.2;
+    }
+    .second-hr {
+      margin-top: 3rem;
+    }
+  
+    .hero-section-container {
+      position: relative;
+      width: 1400px;
+      margin-inline: auto;
+      display: flex;
+      padding-top: 3rem;
+  
+      .top-text {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        right: -3%;
+        gap: 0;
+        .little-advert {
+          color: white;
+          text-transform: capitalize;
+          font-size: 3.6rem;
+        }
+        .line-vector {
+          align-self: flex-end;
+          width: 200px;
+        }
+      }
+      .hero-section-inner {
+        display: flex;
+        padding-top: 5rem;
+        .left-side {
+          width: 50%;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          gap: 6rem;
+          align-items: flex-start;
+  
+          .top-star {
+            margin-left: 6rem;
+          }
+
+          .right-star{
+            position: absolute;
+            left: 220%;
+            top: 14%;
+          }
+          .bottom-star{
+            position: absolute;
+            bottom: 13%;
+            left: 122%;
+          }
+  
+          .left-flair {
+            position: absolute;
+            top: -35%;
+            left: -25%;
+            width: 1090px;
+            opacity: 0.4;
+          }
+  
+          .middle-content {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            align-items: flex-start;
+            .title-tag {
+              width: 722px;
+            }
+            .brief {
+              color: #fff;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 166%;
+              width: 58%;
+            }
+          }
+          .countdown {
+            width: 285px;
+          }
+        }
+        .right-side {
+          width: 50%;
+          padding-top: 5rem;
+          // padding-bottom: rem;
+          .right-flair {
+            position: absolute;
+            top: 0%;
+            right: -25%;
+            width: 70%;
+            opacity: 0.7;
+          }
+          .metrix {
+            position: absolute;
+            right: -8%;
+            width: 70%;
+            opacity: 0.5;
+            top: 0;
+            // bottom: 0;
+          }
+          .man {
+            //   width: 828px;
+            //   height: 715px;
+            position: absolute;
+            right: -3%;
+            width: 50%;
+          }
+          .space {
+            //   width: 828px;
+            //   height: 715px;
+            position: absolute;
+            top: 18%;
+            width: 570px;
+            height: 570px;
+            right: 2%;
+            //   right: -10%;
+            //   width: 50%;
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,104 @@
+.judge-parent {
+  .judge-container {
+    padding-block: 8rem;
+    display: flex;
+    align-items: center;
+
+    .left-section {
+      width: 50%;
+      position: relative;
+      align-self: flex-end;
+
+      .faq-picture {
+        width: 100%;
+      }
+
+      .left-purple-flair {
+        position: absolute;
+        // top: 0;
+        left: -37%;
+        width: 900px;
+        top: 40%;
+        opacity: 0.5;
+        border-radius: 50%;
+      }
+
+      .p-star {
+        width: 30px;
+        height: 36px;
+        position: absolute;
+        left: 20%;
+        top: -13%;
+      }
+
+      .faded-star {
+        position: absolute;
+        bottom: 43%;
+        left: 57%;
+      }
+
+      .sharp-star {
+        position: absolute;
+        bottom: 1%;
+      }
+    }
+
+    .criteria {
+      width: 550px;
+      margin-left: auto;
+      position: relative;
+
+      .criteria-top-content {
+        margin-bottom: 2.1rem;
+        .criteria-heading-text {
+          color: #fff;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 700;
+          text-transform: capitalize;
+          .colored {
+            color: #d434fe;
+            font-family: Clash Display;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+          }
+        }
+      }
+
+      .more-details {
+        margin-bottom: 2.1rem;
+
+        .colored {
+          color: #ff26b9;
+          font-family: Montserrat;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 173.5%; /* 27.76px */
+        }
+        .more-text {
+          color: #fff;
+          font-family: Montserrat;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 173.5%;
+        }
+      }
+
+      .right-purple-flair {
+        position: absolute;
+        width: 900px;
+        opacity: 0.5;
+        border-radius: 50%;
+        bottom: -71%;
+        left: 5%;
+      }
+
+      .btn {
+        margin-top: 5rem;
+      }
+    }
+  }
+}

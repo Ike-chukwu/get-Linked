@@ -1,0 +1,36 @@
+nav {
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+  align-items: center;
+  padding-bottom: 2.5rem;
+  padding-top: 5rem;
+
+  .logo {
+    width: 180px;
+    object-fit: contain;
+  }
+
+  .far-right {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 5rem;
+      font-size: 1.6rem;
+
+      .link {
+        color: white;
+        text-transform: capitalize;
+
+        &:nth-child(3) {
+          text-transform: unset;
+        }
+      }
+    }
+  }
+}

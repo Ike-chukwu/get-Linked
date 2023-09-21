@@ -1,0 +1,56 @@
+.rules-parent {
+  .rules-container {
+    padding-block: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left-side {
+      position: relative;
+      width: 40%;
+      .l-flair {
+        position: absolute;
+        width: 1800px;
+        opacity: 0.4;
+        top: -163%;
+        left: -87%;
+      }
+
+      .t-star {
+        position: absolute;
+        top: -20%;
+        left: 50%;
+      }
+
+      .b-star {
+        position: absolute;
+        right: 0%;
+        bottom: -25%;
+      }
+    }
+
+    .right-side {
+      width: 50%;
+      position: relative;
+      .woman {
+        width: 100%;
+        margin-left: auto;
+      }
+
+      .r-flair {
+        position: absolute;
+        width: 1800px;
+        opacity: 0.8;
+        left: 25%;
+        top: -12%;
+        opacity: 0.4;
+      }
+    }
+  }
+
+  .rules-hr {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.18);
+    width: 100%;
+    opacity: 0.2;
+  }
+}
