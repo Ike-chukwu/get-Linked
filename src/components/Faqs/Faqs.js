@@ -4,6 +4,7 @@ import SubHeadingText from "../SubHeadingText/SubHeadingText";
 import plus from "../../images/plus.png";
 import thinking from "../../images/thinking.png";
 import "./Faqs.scss";
+import HorizontalLine from "../HorizontalLine/HorizontalLine";
 
 const Faqs = () => {
   return (
@@ -62,7 +63,7 @@ const Faqs = () => {
           <img src={thinking} alt="" />
         </div>
       </section>
-      <hr className="second-hr" />
+      <HorizontalLine />
     </div>
   );
 };

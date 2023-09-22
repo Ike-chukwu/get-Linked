@@ -1,0 +1,214 @@
+.prizes-parent {
+  position: relative;
+  padding-bottom: 15rem;
+
+  .awards-briefing {
+    display: none;
+    .heading-prize {
+      color: #fff;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      .colored-aspect {
+        color: #d434fe;
+        font-family: Clash Display;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+      }
+    }
+
+    .highlight {
+      color: #fff;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 27.5px;
+      margin-top: 1.6rem;
+    }
+  }
+  .prizes-container {
+    display: flex;
+    margin-top: 7rem;
+    justify-content: space-between;
+
+    .left-focus {
+      width: 50%;
+      padding-top: 20rem;
+      position: relative;
+
+      .pink-first-star {
+        width: 21px;
+        height: 21px;
+        position: absolute;
+        left: 40%;
+        top: -1%;
+      }
+      .white-first-star {
+        width: 21px;
+        height: 21px;
+        position: absolute;
+        left: 40%;
+        bottom: -4%;
+      }
+      .trophy {
+        width: 100%;
+        position: relative;
+        z-index: 100;
+      }
+
+      .left-side-flair {
+        position: absolute;
+        left: -20%;
+        top: 0;
+        opacity: 0.6;
+        z-index: 50;
+      }
+    }
+    .right-focus {
+      width: 45%;
+      position: relative;
+      .white-1-star {
+        position: absolute;
+        top: 30%;
+        left: 5%;
+      }
+      .high-star {
+        position: absolute;
+        top: 55%;
+        right: -1%;
+      }
+      .low-star {
+        position: absolute;
+        right: 30%;
+        opacity: .4;
+        bottom: -4%;
+      }
+      .right-side-flair {
+        position: absolute;
+        top: 40%;
+        right: -65%;
+        opacity: 0.6;
+        z-index: 50;
+        width: 700px;
+      }
+
+      .awards-briefing-two {
+        padding-left: 10rem;
+        .heading-prize {
+          color: #fff;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 700;
+          .colored-aspect {
+            color: #d434fe;
+            font-family: Clash Display;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+          }
+        }
+
+        .highlight {
+          color: #fff;
+          font-family: Montserrat;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 27.5px;
+          margin-top: 1.6rem;
+        }
+      }
+
+      .card-pack {
+        padding-top: 38rem;
+        display: flex;
+        gap: 3rem;
+
+        .award-card {
+          position: relative;
+          border-radius: 8px;
+          border: 1px solid #d434fe;
+          background: rgba(212, 52, 254, 0.12);
+          width: 212px;
+          height: 266px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          padding-top: 8rem;
+          &:nth-child(2) {
+            border-radius: 8px;
+            border: 1px solid #903aff;
+            background: rgba(144, 58, 255, 0.12);
+            width: 212px;
+            height: 317px;
+            margin-top: -3rem;
+            padding-top: 12rem;
+
+            .sport-content {
+              .position {
+                text-align: center;
+                color: #fff;
+                font-family: Montserrat;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 700;
+              }
+              .role {
+                color: #fff;
+                font-family: Montserrat;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                text-transform: capitalize;
+              }
+            }
+          }
+          .sport-content {
+            .position {
+              text-align: center;
+              color: #fff;
+              font-family: Montserrat;
+              font-size: 36px;
+              font-style: normal;
+              font-weight: 700;
+            }
+            .role {
+              color: #fff;
+              font-family: Montserrat;
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 600;
+              text-transform: capitalize;
+            }
+          }
+
+          .money {
+            color: #903aff;
+            font-family: Montserrat;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            margin-top: 2rem;
+          }
+
+          .silver {
+            width: 180px;
+            height: 180px;
+            position: absolute;
+            top: -40%;
+          }
+
+          .gold {
+            position: absolute;
+            width: 296px;
+            height: 296px;
+            top: -50%;
+          }
+        }
+      }
+    }
+  }
+}

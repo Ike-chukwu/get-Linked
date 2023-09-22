@@ -1,0 +1,40 @@
+.partners-parent {
+  .partners-container {
+    padding-block: 8rem;
+    .partners-head {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      align-items: center;
+      flex-direction: column;
+      .partners-title {
+        color: #fff;
+        font-family: Clash Display;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        text-transform: capitalize;
+      }
+      .supporting-text {
+        color: #fff;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        width: 350px;
+        margin-inline: auto;
+        line-height: 1.5;
+      }
+    }
+    .sponsor-picture{
+        width: 1400px;
+        margin-inline: auto;
+        margin-top: 6.5rem;
+        position: relative;
+        img{
+            width: 100%;
+        }
+    }
+  }
+}

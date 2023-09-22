@@ -1,0 +1,312 @@
+.timeline-parent {
+  .timeline-container {
+    padding-block: 8rem;
+    .timeline-head {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      align-items: center;
+      flex-direction: column;
+      .timeline-title {
+        color: #fff;
+        font-family: Clash Display;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        text-transform: capitalize;
+      }
+      .supporting-text {
+        color: #fff;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        width: 300px;
+        margin-inline: auto;
+        line-height: 1.5;
+      }
+    }
+
+    .timeline-content {
+      padding-top: 7rem;
+      padding-bottom: 5rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      .track-container {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        width: 950px;
+        gap: 10rem;
+        .left {
+          text-align: right;
+          align-self: flex-end;
+          .tracktitle {
+            color: #d434fe;
+            font-family: Montserrat;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: capitalize;
+          }
+          .paragraph {
+            margin-top: 1.2rem;
+            color: #fff;
+            text-align: right;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.5;
+            width: 340px;
+          }
+        }
+        .middle {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .line {
+            width: 4px;
+            height: 8rem;
+            margin-bottom: 0.5rem;
+            background: #d434fe;
+          }
+          .circle {
+            width: 5.3rem;
+            height: 5.3rem;
+            border-radius: 50%;
+            background: linear-gradient(270deg, #903aff 0%, #d434fe 100%);
+            color: white;
+            font-size: 2.4rem;
+            line-height: 5.3rem;
+            text-align: center;
+          }
+        }
+        .last {
+          align-self: flex-end;
+          .last-item {
+            color: #d434fe;
+            font-family: Montserrat;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          }
+        }
+      }
+      .track-container-two {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        width: 950px;
+        gap: 9rem;
+
+        .left {
+          text-align: right;
+          align-self: flex-end;
+          width: 35rem;
+          padding-right: 1.5rem;
+          .tracktitle {
+            color: #d434fe;
+            font-family: Montserrat;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: capitalize;
+          }
+        }
+        .middle {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .line {
+            width: 4px;
+            height: 8rem;
+            margin-bottom: 0.5rem;
+            background: #d434fe;
+          }
+          .circle {
+            width: 5.3rem;
+            height: 5.3rem;
+            border-radius: 50%;
+            background: linear-gradient(270deg, #903aff 0%, #d434fe 100%);
+            color: white;
+            font-size: 2.4rem;
+            line-height: 5.3rem;
+            text-align: center;
+          }
+        }
+        .last {
+          align-self: flex-end;
+          margin-left: 1rem;
+          .last-item {
+            color: #d434fe;
+            font-family: Montserrat;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          }
+          .paragraph {
+            margin-top: 1.2rem;
+            color: #fff;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.5;
+            width: 338px;
+          }
+        }
+      }
+
+      .track-container-four {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        width: 950px;
+        justify-content: space-between;
+        .left {
+          text-align: right;
+          align-self: flex-end;
+          width: 35rem;
+          .tracktitle {
+            color: #d434fe;
+            font-family: Montserrat;
+            font-size: 24px;
+            padding-right: 1.5rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: capitalize;
+          }
+        }
+        .middle {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .line {
+            width: 4px;
+            height: 8rem;
+            margin-bottom: 0.5rem;
+            background: #d434fe;
+          }
+          .circle {
+            width: 5.3rem;
+            height: 5.3rem;
+            border-radius: 50%;
+            background: linear-gradient(270deg, #903aff 0%, #d434fe 100%);
+            color: white;
+            font-size: 2.4rem;
+            line-height: 5.3rem;
+            text-align: center;
+          }
+        }
+        .last {
+          align-self: flex-end;
+          width: 370px;
+          
+          
+          .last-item {
+            color: #d434fe;
+            font-family: Montserrat;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            padding-left: 1rem;
+          }
+          .paragraph {
+            margin-top: 1.2rem;
+            color: #fff;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.5;
+            width: 338px;
+            padding-left: 1rem;
+          }
+        }
+      }
+
+      .track-container-five {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        width: 950px;
+        gap: 10rem;
+        .left {
+          text-align: right;
+          align-self: flex-end;
+          width: 338px;
+          .tracktitle {
+            color: #d434fe;
+            font-family: Montserrat;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: capitalize;
+          }
+          .paragraph {
+            margin-top: 1.2rem;
+            color: #fff;
+            text-align: right;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.5;
+            
+          }
+        }
+        .middle {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .line {
+            width: 4px;
+            height: 8rem;
+            margin-bottom: 0.5rem;
+            background: #d434fe;
+          }
+          .circle {
+            width: 5.3rem;
+            height: 5.3rem;
+            border-radius: 50%;
+            background: linear-gradient(270deg, #903aff 0%, #d434fe 100%);
+            color: white;
+            font-size: 2.4rem;
+            line-height: 5.3rem;
+            text-align: center;
+          }
+        }
+        .last {
+          align-self: flex-end;
+          .last-item {
+            color: #d434fe;
+            font-family: Montserrat;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          }
+        }
+      }
+    }
+  }
+}
