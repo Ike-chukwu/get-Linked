@@ -33,7 +33,11 @@ const Navbar = () => {
           <span className="link">timeline</span>
           <span className="link">Overview</span>
           <span className="link">FAQS</span>
-          <Link to="/contact" style={{ textDecoration: "none" }}>
+          <Link
+            to="/contact"
+            style={{ textDecoration: "none" }}
+            onClick={() => setNavBarActive(false)}
+          >
             <span
               className={
                 location.pathname == "/contact" ? "link current" : "link"
@@ -45,6 +49,7 @@ const Navbar = () => {
         </div>
         <Link to="/register">
           <button
+            onClick={() => setNavBarActive(false)}
             className={
               location.pathname == "/register" ? "nav-btn currently" : "nav-btn"
             }

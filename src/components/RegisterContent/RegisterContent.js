@@ -12,6 +12,7 @@ import man from "../../images/man-walk.png";
 import Button from "../Button/Button";
 import { useState } from "react";
 import Input from "../Input/Input";
+import { Link } from "react-router-dom";
 
 const RegisterContent = () => {
   const [registrationDetails, setRegistrationDetails] = useState({
@@ -124,8 +125,11 @@ const RegisterContent = () => {
 
   return (
     <div className="register-parent">
-      <img src={congrats} alt="" className="congrats" />
+      <Link to="/">
+        <img src={congrats} alt="" className="congrats" />
+      </Link>
       <section className="register-container">
+        <h1 className="registration-heading-text-one">register</h1>
         <div className="register-left-hand">
           <img src={topStar} className="faded-white-register" alt="" />
           <img src={pinkStar} className="first-pink-regoister" alt="" />
@@ -182,7 +186,7 @@ const RegisterContent = () => {
             <div className="input-collection">
               {secondRowOfInputs.map((input) => {
                 return (
-                  <div className="input-detail"  key={input.name}>
+                  <div className="input-detail" key={input.name}>
                     <label htmlFor="">{input.labelName}</label>
                     <Input
                       key={input.name}
