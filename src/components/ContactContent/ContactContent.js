@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import "./ContactContent.scss";
 import topStar from "../../images/star.png";
-import rightStar from "../../images/star-1.png";
 import pinkStar from "../../images/satagra.png";
-import bottomStar from "../../images/star-2.png";
 import leftFlair from "../../images/Purple-Lens-Flare-PNG-left-side.png";
 import fb from "../../images/Vector-1.png";
 import twitter from "../../images/twitter.png";
 import ig from "../../images/mdi_instagram.png";
 import linkedin from "../../images/ri_linkedin-fill.png";
-import locationIcon from "../../images/Vector-2.png";
 import Button from "../Button/Button";
 import Input from "../Input/Input";
 
@@ -18,6 +15,7 @@ const ContactContent = () => {
     FirstName: "",
     Mail: "",
     Message: "",
+    Number: "",
   });
 
   const inputFields = [
@@ -29,8 +27,7 @@ const ContactContent = () => {
       errorMessage: "Field cannot be empty",
       required: true,
       placeHolder: "Enter your name",
-      pattern:"^(?!\s*$).+"
-
+      pattern: "^(?!s*$).+",
     },
     {
       id: 1,
@@ -43,11 +40,21 @@ const ContactContent = () => {
     },
     {
       id: 2,
+      elementType: "input",
+      name: "Number",
+      type: "text",
+      errorMessage: "Invalid Format",
+      pattern: "^[0-9]+$",
+      required: true,
+      placeHolder: "Enter your phone number",
+    },
+    {
+      id: 3,
       elementType: "textarea",
       name: "Message",
       type: "text",
       errorMessage: "Field cannot be empty",
-      pattern:"^(?!\s*$).+",
+      pattern: "^(?!s*$).+",
       required: true,
       placeHolder: "Enter a message",
     },
@@ -107,6 +114,9 @@ const ContactContent = () => {
           <h2 className="form-title">
             Questions or need assistance?Let us know about it!
           </h2>
+          <p className="mobile-detail">
+            Email us below to any question related to our event
+          </p>
           {inputFields.map((field) => {
             return (
               <Input
@@ -129,6 +139,16 @@ const ContactContent = () => {
           <textarea type="text" className="input-field" rows={50} /> */}
           <div className="btn-container-second">
             <Button>submit</Button>
+          </div>
+
+          <div className="social-links">
+            <p className="info-content">Share on</p>
+            <div className="icons-pack-in-contact">
+              <img className="logo-icon" src={ig} alt="" />
+              <img className="logo-icon" src={twitter} alt="" />
+              <img className="logo-icon" src={fb} alt="" />
+              <img className="logo-icon" src={linkedin} alt="" />
+            </div>
           </div>
         </div>
       </section>

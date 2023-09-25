@@ -1,7 +1,7 @@
 .contact-parent {
   .contact-container {
     display: flex;
-    padding-block: 10rem;
+    padding-block: 8rem;
     .left-part {
       width: 50%;
       display: flex;
@@ -138,6 +138,100 @@
         display: flex;
         justify-content: center;
         padding-block: 1.5rem;
+      }
+      .mobile-detail {
+        display: none;
+      }
+      .social-links {
+        display: none;
+        gap: 1.5rem;
+        align-items: unset;
+        flex-direction: column;
+        .info-content {
+          color: #d434fe;
+          font-family: Montserrat;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        .icons-pack-in-contact {
+          display: flex;
+          align-items: center;
+          gap: 1.5rem;
+
+          .logo-icon {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 999px) {
+  .contact-parent {
+    .contact-container {
+      flex-direction: column;
+      gap: 0rem;
+      width: 100%;
+      padding-block: 3rem;
+
+      .left-part {
+        display: none;
+      }
+
+      .right-form {
+        width: 100%;
+        background: none;
+        padding-inline: unset;
+        position: relative;
+        box-shadow: unset;
+
+        .social-links{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .faded-star {
+          top: 6%;
+        }
+
+        .pinkish-star {
+          bottom: 17%;
+          left: 0rem;
+        }
+
+        .whitish-star {
+          bottom: 30%;
+          right: -10%;
+        }
+
+        .form-title {
+          width: 100%;
+        }
+
+        .extreme-right {
+          left: -30%;
+          top: -10%;
+          width: 700px;
+        }
+
+        .mobile-detail {
+          display: unset;
+          color: #fff;
+          font-family: Montserrat;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          width: 100%;
+          line-height: 27.5px;
+          margin-top: 1.6rem;
+        }
       }
     }
   }
