@@ -20,7 +20,30 @@ body {
 
 
 
-section{
+section {
   width: 1400px;
   margin-inline: auto;
+}
+
+
+@media (max-width:1520px) {
+  section {
+    width: 1100px;
+  }
+
+}
+
+@media (max-width:1200px) {
+  section {
+    width: 900px;
+  }
+
+}
+
+@media (max-width:999px) {
+  section {
+    width: 100%;
+    padding-inline: 3rem;
+  }
+
 }

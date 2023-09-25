@@ -8,10 +8,10 @@ import title from "../../images/Title.png";
 import count from "../../images/Countdown time.png";
 import Button from "../Button/Button";
 import leftFlair from "../../images/Purple-Lens-Flare-PNG-left-side.png";
-import rightFlair from "../../images/Purple-Lens-Flare-PNG-right-side.png";
 import metrix from "../../images/metrix 1.png";
 import man from "../../images/man-wearing-smart-glasses-touching-virtual-screen 1.png";
 import space from "../../images/space-image.png";
+import mobileTitle from "../../images/title-mobile.png";
 
 const HeroSection = () => {
   return (
@@ -32,6 +32,7 @@ const HeroSection = () => {
             <img src={leftFlair} className="left-flair" alt="" />
             <div className="middle-content">
               <img src={title} className="title-tag" alt="" />
+              <img src={mobileTitle} className="mobile-title-tag" alt="" />
               <p className="brief">
                 Participate in getlinked tech Hackathon 2023 stand a chance to
                 win a Big prize
@@ -48,7 +49,7 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-      <hr className="second-hr"/>
+      <hr className="second-hr" />
     </div>
   );
 };

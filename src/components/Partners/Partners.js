@@ -21,9 +21,9 @@ const Partners = () => {
           <img src={pinkStar} className="first-pink-star" alt="" />
           <img src={pinkStar} className="second-pink-star" alt="" />
           <img src={topStar} className="only-white-star" alt="" />
-          <img src={sponsors} alt="" />
-          <img src={rightFlair} className="far-leftt-flair" alt="" />
-          <img src={rightFlair} className="far-right-flair" alt="" />
+          <img src={sponsors} className="sponsor-pic" alt="" />
+          <img src={rightFlair} className="far-left-flair" alt="" />
+          <img src={rightFlair} className="sec-flair" alt="" />
         </div>
       </section>
       <HorizontalLine />

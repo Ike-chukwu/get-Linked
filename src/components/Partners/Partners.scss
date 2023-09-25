@@ -27,14 +27,121 @@
         line-height: 1.5;
       }
     }
-    .sponsor-picture{
-        width: 1400px;
-        margin-inline: auto;
-        margin-top: 6.5rem;
-        position: relative;
-        img{
-            width: 100%;
+    .sponsor-picture {
+      width: 1400px;
+      margin-inline: auto;
+      margin-top: 6.5rem;
+      position: relative;
+      .sec-flair {
+        width: 1200px;
+        right: -25%;
+        top: 10%;
+        opacity: 0.4;
+        position: absolute;
+        filter: blur(40px);
+      }
+      .far-left-flair {
+        width: 1000px;
+        position: absolute;
+        left: -45%;
+        top: -60%;
+        opacity: 0.4;
+        filter: blur(40px);
+      }
+      .sponsor-pic {
+        width: 100%;
+      }
+      .first-pink-star {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: -5%;
+        left: 5%;
+      }
+      .second-pink-star {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 20%;
+        left: 59%;
+      }
+      .only-white-star {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        bottom: 10%;
+        left: 59%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1520px) {
+  .partners-parent {
+    .partners-container {
+      .sponsor-picture {
+        width: 1100px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .partners-parent {
+    .partners-container {
+      .sponsor-picture {
+        width: 900px;
+      }
+    }
+  }
+}
+
+@media (max-width: 999px) {
+  .partners-parent {
+    .partners-container {
+      padding-inline: 3rem;
+      .partners-head {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .partners-title {
+          font-size: 2.2rem;
         }
+        .supporting-text {
+          width: 100%;
+        }
+      }
+      .sponsor-picture {
+        width: 100%;
+
+        .first-pink-star {
+          width: 15px;
+          height: 15px;
+          top: 5%;
+        }
+        .second-pink-star {
+          top: 40%;
+        }
+        .only-white-star {
+          width: 15px;
+          height: 15px;
+          bottom: 10%;
+          left: 90%;
+        }
+
+        .far-left-flair {
+          width: 500px;
+          left: -30%;
+          top: -60%;
+        }
+
+        .sec-flair {
+          width: 500px;
+          right: -20%;
+          bottom: 0;
+        }
+      }
     }
   }
 }

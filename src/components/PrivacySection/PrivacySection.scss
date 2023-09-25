@@ -1,0 +1,337 @@
+.policy-parent {
+  .policy-container {
+    display: flex;
+    padding-block: 20rem;
+    .left-privacy {
+      width: 50%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 5rem;
+      .pink {
+        width: 30px;
+        margin-top: 52rem;
+      }
+      .words {
+        position: relative;
+        .second-white-one {
+          position: absolute;
+          left: 48%;
+          top: -2%;
+          opacity: 0.5;
+        }
+        .top-part {
+          display: flex;
+          flex-direction: column;
+          gap: 10rem;
+          position: relative;
+          .pinkish {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 15%;
+            right: 0;
+          }
+          .inner-top-part {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            .heading-text {
+              color: #fff;
+              font-size: 32px;
+              font-style: normal;
+              font-weight: 700;
+              .colored {
+                color: #d434fe;
+                font-family: Clash Display;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+              }
+            }
+
+            .more-details {
+              color: #fff;
+              font-family: Montserrat;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 27.5px;
+              margin-top: 1.6rem;
+            }
+            .more-details-info {
+              color: #fff;
+              font-family: Montserrat;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 27.5px;
+              margin-top: 1.6rem;
+              width: 400px;
+            }
+          }
+          .border-text {
+            border: 0.1rem solid #d434fe;
+            padding-block: 5rem;
+            padding-inline: 7rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            .more-text-content {
+              color: #fff;
+              font-family: Montserrat;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 2.2;
+            }
+            .licensing-policy-content {
+              .licensing-policy-inner {
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+
+                .policy-heading {
+                  color: #d434fe;
+                  font-family: Montserrat;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 216.4%; /* 34.624px */
+                }
+
+                .terms {
+                  color: #fff;
+                  font-family: Montserrat;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 216.4%; /* 30.296px */
+                }
+
+                .ticked-section {
+                  display: flex;
+                  align-items: center;
+                  gap: 1.4rem;
+
+                  .tick {
+                    width: 22px;
+                    height: 22px;
+                  }
+
+                  .briefing-story {
+                    color: #fff;
+                    font-family: Montserrat;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 1.5;
+                  }
+                }
+                .btn-container {
+                  padding-top: 1rem;
+                  padding-bottom: 2rem;
+                  display: flex;
+                  justify-content: center;
+                }
+              }
+            }
+          }
+        }
+      }
+      .leftish {
+        position: absolute;
+        width: 1200px;
+        left: -45%;
+        bottom: -49%;
+        opacity: 0.5;
+        filter: blur(40px);
+      }
+    }
+    .right-privacy {
+      display: flex;
+      justify-content: flex-end;
+      width: 50%;
+      position: relative;
+      .privacy-pic {
+        width: 500px;
+        position: absolute;
+        top: 30%;
+      }
+      .privacy-pic-second {
+        width: 500px;
+        position: absolute;
+      }
+      .third-white-one {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        right: 15%;
+        top: 20%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1520px) {
+  .policy-parent {
+    .policy-container {
+      justify-content: space-between;
+      .left-privacy {
+        width: 45%;
+        gap: 2rem;
+      }
+      .right-privacy {
+        display: flex;
+        justify-content: flex-end;
+        width: 40%;
+        position: relative;
+        .privacy-pic {
+          width: 500px;
+          position: absolute;
+          top: 30%;
+        }
+        .privacy-pic-second {
+          width: 500px;
+          position: absolute;
+        }
+        .third-white-one {
+          width: 15px;
+          height: 15px;
+          position: absolute;
+          right: 15%;
+          top: 20%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .policy-parent {
+    .policy-container {
+      .left-privacy {
+        width: 35%;
+        .pink {
+          width: 20px;
+          height: 20px;
+        }
+
+        .words {
+          .second-white-one {
+            width: 20px;
+            height: 20px;
+          }
+          .top-part {
+            display: flex;
+            gap: 4rem;
+            position: relative;
+
+            .inner-top-part {
+              gap: 0rem;
+            }
+            .border-text {
+              padding-inline: 5rem;
+              padding-block: 3rem;
+
+              .licensing-policy-content {
+                .licensing-policy-inner {
+                  gap: 1.8rem;
+                  .btn-container {
+                    padding-bottom: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .right-privacy {
+        display: flex;
+        align-items: center;
+        width: 40%;
+        position: relative;
+        .privacy-pic {
+          width: 100%;
+          position: unset;
+          align-self: flex-end;
+        }
+        .privacy-pic-second {
+          width: 100%;
+          position: absolute;
+        }
+        .third-white-one {
+          width: 15px;
+          height: 15px;
+          position: absolute;
+          right: 15%;
+          top: 20%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 999px) {
+  .policy-parent {
+    .policy-container {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 8rem;
+      padding-bottom: 16rem;
+      gap: 0rem;
+      .left-privacy {
+        width: 100%;
+        padding-inline: 0;
+        position: relative;
+        .pink {
+          position: absolute;
+        }
+        .words {
+          width: 100%;
+          .second-white-one {
+            left: 75%;
+            top: -5%;
+          }
+          .top-part {
+            width: 100%;
+            .border-text {
+              padding: 3rem;
+            }
+            .inner-top-part {
+              width: 100%;
+              text-align: center;
+              align-items: center;
+              .heading-text {
+                font-size: 2.2rem;
+                .colored {
+                  font-size: 2.2rem;
+                }
+              }
+              .more-details-info {
+                width: 100%;
+              }
+            }
+            .pinkish {
+              top: 20%;
+            }
+          }
+        }
+        .leftish {
+          position: absolute;
+          width: 500px;
+          left: -35%;
+          bottom: -10%;
+          opacity: 0.6;
+        }
+      }
+      .right-privacy {
+        width: 100%;
+        .privacy-pic {
+          margin-top: 30rem;
+          z-index: 100;
+        }
+      }
+    }
+  }
+}

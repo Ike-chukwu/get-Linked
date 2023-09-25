@@ -2,14 +2,11 @@ import React from "react";
 import "./Prizes.scss";
 import trophy from "../../images/trophy.png";
 import topStar from "../../images/star.png";
-import rightStar from "../../images/star-1.png";
-import bottomStar from "../../images/star-2.png";
 import rightFlair from "../../images/Purple-Lens-Flare-PNG-right-side.png";
 import pinkStar from "../../images/satagra.png";
 import bronze from "../../images/bronze_medal-1.png";
 import gold from "../../images/gold_medal-1.png";
 import silver from "../../images/silver_medal-1.png";
-import HorizontalLine from "../HorizontalLine/HorizontalLine";
 
 
 const Prizes = () => {
@@ -30,7 +27,7 @@ const Prizes = () => {
           <img src={pinkStar} className="pink-first-star" alt="" />
           <img src={topStar} className="white-first-star" alt="" />
           <img src={trophy} className="trophy" alt="" />
-          <img className="left-side-flair" src={rightFlair} alt="" />
+          <img className="top-flair" src={rightFlair} alt="" />
         </div>
         <div className="right-focus">
           <img src={topStar} className="white-1-star" alt="" />

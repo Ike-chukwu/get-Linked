@@ -21,3 +21,12 @@
   line-height: 27.5px;
   margin-top: 1.6rem;
 }
+
+@media (max-width: 422px) {
+  .heading-text {
+    font-size: 2.2rem;
+    .colored {
+      font-size: 2.2rem;
+    }
+  }
+}

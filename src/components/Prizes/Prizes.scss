@@ -1,7 +1,8 @@
 .prizes-parent {
   position: relative;
   padding-bottom: 15rem;
-
+  background-position: center;
+  background-size: cover;
   .awards-briefing {
     display: none;
     .heading-prize {
@@ -58,12 +59,13 @@
         z-index: 100;
       }
 
-      .left-side-flair {
+      .top-flair {
         position: absolute;
-        left: -20%;
-        top: 0;
-        opacity: 0.6;
-        z-index: 50;
+        left: -40%;
+        width: 900px;
+        top: 0%;
+        filter: blur(40px);
+        opacity: 0.7;
       }
     }
     .right-focus {
@@ -82,16 +84,17 @@
       .low-star {
         position: absolute;
         right: 30%;
-        opacity: .4;
+        opacity: 0.4;
         bottom: -4%;
       }
       .right-side-flair {
         position: absolute;
-        top: 40%;
+        top: 20%;
         right: -65%;
-        opacity: 0.6;
+        opacity: 0.5;
         z-index: 50;
-        width: 700px;
+        width: 900px;
+        filter: blur(40px);
       }
 
       .awards-briefing-two {
@@ -122,7 +125,7 @@
       }
 
       .card-pack {
-        padding-top: 38rem;
+        padding-top: 28rem;
         display: flex;
         gap: 3rem;
 
@@ -206,6 +209,407 @@
             width: 296px;
             height: 296px;
             top: -50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1520px) {
+  .prizes-parent {
+    .prizes-container {
+      align-items: center;
+
+      .left-focus {
+        width: 40%;
+      }
+      .right-focus {
+        width: 55%;
+        .white-1-star {
+          position: absolute;
+          top: 30%;
+          left: 5%;
+        }
+
+        .card-pack {
+          gap: 5rem;
+
+          .award-card {
+            width: 212px;
+            height: 266px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 8rem;
+            padding-inline: 2rem;
+            &:nth-child(2) {
+              border-radius: 8px;
+              border: 1px solid #903aff;
+              background: rgba(144, 58, 255, 0.12);
+              width: 212px;
+              height: 317px;
+              margin-top: -3rem;
+              padding-top: 12rem;
+              padding-inline: 2rem;
+            }
+            .sport-content {
+              .position {
+                text-align: center;
+                color: #fff;
+                font-family: Montserrat;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 700;
+              }
+              .role {
+                color: #fff;
+                font-family: Montserrat;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                text-transform: capitalize;
+              }
+            }
+
+            .silver {
+              width: 180px;
+              height: 180px;
+              position: absolute;
+              top: -40%;
+            }
+
+            .gold {
+              position: absolute;
+              width: 296px;
+              height: 296px;
+              top: -50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .prizes-parent {
+    .prizes-container {
+      justify-content: space-between;
+      .left-focus {
+        width: 40%;
+      }
+      .right-focus {
+        width: 50%;
+        .card-pack {
+          display: flex;
+          gap: 4rem;
+
+          .award-card {
+            width: 200px;
+            height: 196px;
+            &:nth-child(2) {
+              width: 200px;
+              height: 241px;
+              margin-top: -3rem;
+
+              .sport-content {
+                .position {
+                  font-size: 2.6rem;
+                }
+                .role {
+                  font-size: 2rem;
+                }
+              }
+            }
+            .sport-content {
+              .position {
+                font-size: 2.6rem;
+              }
+              .role {
+                font-size: 2rem;
+              }
+            }
+
+            .money {
+              font-size: 2.2rem;
+            }
+
+            .silver {
+              width: 120px;
+              height: 120px;
+              top: -30%;
+            }
+
+            .gold {
+              width: 236px;
+              height: 236px;
+              top: -50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 999px) {
+  .prizes-parent {
+    padding-bottom: 7rem;
+    .awards-briefing {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      .heading-prize {
+        font-size: 2.2rem;
+        .colored-aspect {
+          font-size: 2.2rem;
+        }
+      }
+
+      .highlight {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27.5px;
+        margin-top: 1.6rem;
+      }
+    }
+    .prizes-container {
+      flex-direction: column;
+      margin-top: unset;
+
+      .left-focus {
+        width: 100%;
+        padding-top: 7rem;
+
+        .white-first-star {
+          left: 10%;
+        }
+
+        .pink-first-star {
+          width: 20px;
+          height: 20px;
+          top: -20%;
+          left: 10%;
+        }
+      }
+
+      .right-focus {
+        width: 100%;
+        justify-content: center;
+        .awards-briefing-two {
+          display: none;
+        }
+        .white-1-star {
+          width: 20px;
+          height: 20px;
+          display: none;
+        }
+        .high-star {
+          width: 20px;
+          height: 20px;
+          top: 30%;
+          right: 8%;
+        }
+        .low-star {
+          width: 20px;
+          height: 20px;
+          bottom: -10%;
+          right: 32%;
+        }
+        .card-pack {
+          justify-content: center;
+          gap: 2rem;
+
+          .award-card {
+            width: 200px;
+            height: 266px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 8rem;
+            padding-inline: 2rem;
+            &:nth-child(2) {
+              border-radius: 8px;
+              border: 1px solid #903aff;
+              background: rgba(144, 58, 255, 0.12);
+              width: 212px;
+              height: 317px;
+              margin-top: -3rem;
+              padding-top: 12rem;
+              padding-inline: 2rem;
+            }
+            .sport-content {
+              .position {
+                text-align: center;
+                color: #fff;
+                font-family: Montserrat;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 700;
+              }
+              .role {
+                color: #fff;
+                font-family: Montserrat;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                text-transform: capitalize;
+              }
+            }
+
+            .silver {
+              width: 180px;
+              height: 180px;
+              position: absolute;
+              top: -40%;
+            }
+
+            .gold {
+              position: absolute;
+              width: 296px;
+              height: 296px;
+              top: -50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .prizes-parent {
+    .prizes-container {
+      .left-focus {
+        .pink-first-star {
+          width: 20px;
+          height: 20px;
+          top: -50%;
+          left: 5%;
+        }
+      }
+      .right-focus {
+        width: 100%;
+        justify-content: center;
+        .awards-briefing-two {
+          display: none;
+        }
+        .card-pack {
+          justify-content: center;
+          gap: 2rem;
+          padding-top: 20rem;
+
+          .award-card {
+            width: 100px;
+            height: 146px;
+            padding-top: 5rem;
+            &:nth-child(2) {
+              width: 100px;
+              height: 191px;
+              padding-top: 7rem;
+              .sport-content {
+                .position {
+                  font-size: 1.8rem;
+                }
+                .role {
+                  font-size: 1.4rem;
+                }
+              }
+            }
+            .sport-content {
+              .position {
+                font-size: 1.8rem;
+              }
+              .role {
+                font-size: 1.4rem;
+              }
+            }
+
+            .money {
+              margin-top: 1rem;
+              font-size: 1.6rem;
+            }
+
+            .silver {
+              width: 100px;
+              height: 100px;
+              top: -30%;
+            }
+
+            .gold {
+              width: 160px;
+              height: 160px;
+              top: -40%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@media (max-width: 320px) {
+  .prizes-parent {
+    .prizes-container {
+      .right-focus {
+        .card-pack {
+          justify-content: center;
+          gap: 1rem;
+          padding-top: 20rem;
+
+          .award-card {
+            width: 70px;
+            height: 126px;
+            padding-top: 5rem;
+            &:nth-child(2) {
+              width: 70px;
+              height: 171px;
+              padding-top: 7rem;
+              .sport-content {
+                .position {
+                  font-size: 1.8rem;
+                }
+                .role {
+                  font-size: 1.3rem;
+                }
+              }
+            }
+            .sport-content {
+              .position {
+                font-size: 1.8rem;
+              }
+              .role {
+                font-size: 1.3rem;
+              }
+            }
+
+            .money {
+              margin-top: 1rem;
+              font-size: 1.3rem;
+            }
+
+            .silver {
+              width: 80px;
+              height: 80px;
+              top: -30%;
+            }
+
+            .gold {
+              width: 100px;
+              height: 100px;
+              top: -25%;
+            }
           }
         }
       }

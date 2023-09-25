@@ -1,0 +1,205 @@
+.register-parent {
+  position: relative;
+  .congrats {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    display: none;
+    &.display {
+      display: unset;
+    }
+  }
+  .register-container {
+    &.disappear {
+      opacity: 0.1;
+    }
+    display: flex;
+    align-items: flex-start;
+    padding-block: 8rem;
+    .register-left-hand {
+      width: 50%;
+      position: relative;
+      .main-img {
+        width: 100%;
+      }
+      .faded-white-register {
+        position: absolute;
+        bottom: 4%;
+        left: 20%;
+        width: 20px;
+        height: 20px;
+        opacity: 0.5;
+      }
+      .first-pink-regoister {
+        position: absolute;
+        top: 8%;
+        left: 15%;
+        width: 20px;
+        height: 20px;
+      }
+      .second-pink-register {
+        position: absolute;
+        bottom: 20%;
+        right: 13%;
+        width: 20px;
+        height: 20px;
+      }
+      .left-flair-register {
+        position: absolute;
+        width: 1200px;
+        top: -5%;
+        left: -60%;
+        opacity: 0.4;
+        filter: blur(40px);
+      }
+    }
+    .right-reg-form {
+      width: 740px;
+      padding: 5rem 6rem;
+      position: relative;
+      //   height: 740px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      .faded-white-registeration-form {
+        position: absolute;
+        top: 2%;
+        right: 30%;
+        width: 20px;
+        height: 20px;
+        opacity: 0.5;
+      }
+      .white-star-registeration-form {
+        position: absolute;
+        bottom: -2%;
+        right: 7%;
+        width: 15px;
+        height: 15px;
+      }
+      .right-flair-registeration-form {
+        position: absolute;
+        width: 1200px;
+        top: 30%;
+        right: -95%;
+        opacity: 0.4;
+        filter: blur(40px);
+      }
+      .registration-heading-text {
+        color: #d434fe;
+        font-family: Clash Display;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: capitalize;
+        margin-bottom: 4.8rem;
+      }
+      .reg-form-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5rem;
+        .little-text-container {
+          display: flex;
+          gap: 1.5rem;
+          align-items: center;
+          .span-little-text {
+            color: #fff;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+          .img-pack {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.2rem;
+            .m-img {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+        .reg-sub-heading {
+          color: #fff;
+          font-family: Montserrat;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-transform: uppercase;
+        }
+
+        .input-collection {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          .input-detail {
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            label {
+              color: #fff;
+              font-family: Montserrat;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+
+            select {
+              width: 100%;
+              padding: 1.5rem;
+              border-radius: 4px;
+              border: 1px solid #fff;
+              background: rgba(255, 255, 255, 0.03);
+              box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+              color: white;
+              text-transform: capitalize;
+              position: relative;
+            }
+            option {
+              background: rgba(255, 255, 255, 0.03);
+            }
+          }
+        }
+        .instruction {
+          color: #ff26b9;
+          font-family: Montserrat;
+          font-size: 12px;
+          font-style: italic;
+          font-weight: 400;
+          line-height: normal;
+        }
+        .confirm-instruction {
+          display: flex;
+          align-items: center;
+          gap: 1.2rem;
+          .checkbox {
+            border: 1px solid #fff;
+            background: rgba(255, 255, 255, 0.03);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            color: white;
+            text-transform: capitalize;
+          }
+          .confirm-text {
+            color: #fff;
+            font-family: Montserrat;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+        .btn {
+          width: 100%;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

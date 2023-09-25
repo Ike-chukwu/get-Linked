@@ -7,6 +7,33 @@ nav {
   padding-bottom: 2.5rem;
   padding-top: 5rem;
 
+  .menu {
+    display: none;
+  }
+  .nav-btn {
+    border: none;
+    border-radius: 4px;
+    background: linear-gradient(
+      270deg,
+      #903aff 0%,
+      #d434fe 56.42%,
+      #ff26b9 99.99%,
+      #fe34b9 100%
+    );
+    width: 172px;
+    height: 50px;
+    font-size: 1.6rem;
+    color: white;
+    text-transform: capitalize;
+    cursor: pointer;
+    position: relative;
+    &.currently {
+      background: none;
+      border-radius: 4px;
+      border: 2px solid #9a39ff;
+    }
+  }
+
   .logo {
     width: 180px;
     object-fit: contain;
@@ -18,17 +45,105 @@ nav {
     gap: 10rem;
 
     .links {
+      .close {
+        display: none;
+      }
       display: flex;
       align-items: center;
       gap: 5rem;
       font-size: 1.6rem;
-
+      color: #fff;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
       .link {
         color: white;
         text-transform: capitalize;
 
         &:nth-child(3) {
           text-transform: unset;
+        }
+        &.current {
+          background: linear-gradient(90deg, #903aff 3.08%, #ff26b9 93.85%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1520px) {
+  nav {
+    width: 1100px;
+  }
+}
+
+@media (max-width: 1200px) {
+  nav {
+    width: 900px;
+    .far-right {
+      gap: 8rem;
+      .links {
+        gap: 3.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 999px) {
+  nav {
+    width: 100%;
+    padding-inline: 3rem;
+    padding-block: 3rem;
+
+    .menu {
+      display: unset;
+      cursor: pointer;
+      position: relative;
+      z-index: 50;
+    }
+    .logo {
+      width: 100px;
+      object-fit: contain;
+    }
+    .far-right {
+      position: fixed;
+      flex-direction: column;
+      z-index: 100;
+      gap: 4.5rem;
+      top: -100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100vh;
+      flex-direction: column;
+      border-radius: 8px;
+      background: #150e28;
+      align-items: flex-start;
+      padding-left: 3rem;
+      transition: top 0.6s ease-out;
+
+      &.activated {
+        top: 0;
+      }
+
+      .links {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 10rem;
+        gap: 4.5rem;
+
+        .close {
+          width: 23px;
+          height: 23px;
+          position: absolute;
+          right: 2rem;
+          top: 4rem;
+          display: unset;
+          cursor: pointer;
         }
       }
     }

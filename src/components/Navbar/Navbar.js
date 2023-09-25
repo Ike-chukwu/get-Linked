@@ -1,21 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.scss";
 import logo from "../../images/getlinked.png";
+import close from "../../images/close.png";
+import menu from "../../images/menu.png";
 import Button from "../Button/Button";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
+  const [isNavbarActive, setNavBarActive] = useState(false);
+
   return (
     <nav>
-      <img src={logo} className="logo" alt="" />
+      <Link to="/">
+        <img src={logo} className="logo" alt="" />
+      </Link>
+      <img
+        src={menu}
+        onClick={() => setNavBarActive(true)}
+        alt=""
+        className="menu"
+      />
 
-      <div className="far-right">
+      <div className={isNavbarActive ? "far-right activated" : "far-right"}>
         <div className="links">
+          <img
+            src={close}
+            onClick={() => setNavBarActive(false)}
+            alt=""
+            className="close"
+          />
           <span className="link">timeline</span>
-          <span className="link">overview</span>
+          <span className="link">Overview</span>
           <span className="link">FAQS</span>
-          <span className="link">contact</span>
+          <Link to="/contact" style={{ textDecoration: "none" }}>
+            <span
+              className={
+                location.pathname == "/contact" ? "link current" : "link"
+              }
+            >
+              contact
+            </span>
+          </Link>
         </div>
-        <Button>register</Button>
+        <Link to="/register">
+          <button
+            className={
+              location.pathname == "/register" ? "nav-btn currently" : "nav-btn"
+            }
+          >
+            register
+          </button>
+        </Link>
       </div>
     </nav>
   );

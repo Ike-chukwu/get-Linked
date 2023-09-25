@@ -7,6 +7,8 @@ import Faqs from '../components/Faqs/Faqs'
 import TimeLine from '../components/TimeLine/TimeLine'
 import Prizes from '../components/Prizes/Prizes'
 import Partners from '../components/Partners/Partners'
+import PrivacySection from '../components/PrivacySection/PrivacySection'
+import Footer from '../components/Footer/Footer'
 
 const Home = () => {
   return (
@@ -19,6 +21,8 @@ const Home = () => {
         <TimeLine/>
         <Prizes/>
         <Partners/>
+        <PrivacySection/>
+        <Footer/>
     </div>
   )
 }

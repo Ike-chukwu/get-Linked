@@ -90,3 +90,41 @@
     }
   }
 }
+
+@media (max-width: 999px) {
+  .faqs-parent {
+    .faqs-container {
+      width: 100%;
+      flex-direction: column;
+      gap: 6rem;
+      .questions {
+        width: 100%;
+        .heading-text {
+          text-align: center;
+          font-size: 2.2rem;
+          .colored {
+            font-size: 2.2rem;
+          }
+        }
+
+        .more-details {
+          text-align: center;
+        }
+
+        .question-pack {
+          margin-top: 8rem;
+        }
+
+        .next-pink {
+          width: 21px;
+          height: 25px;
+          left: 5%;
+        }
+      }
+
+      .question-picture {
+        width: 100%;
+      }
+    }
+  }
+}
