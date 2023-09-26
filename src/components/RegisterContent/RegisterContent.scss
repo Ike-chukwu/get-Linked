@@ -7,10 +7,7 @@
     transform: translate(-50%, -50%);
     width: 600px;
     z-index: 100;
-    display: none;
-    &.show {
-      display: unset;
-    }
+    // display: none;
   }
   .register-container {
     &.disappear {
@@ -179,6 +176,14 @@
           font-weight: 400;
           line-height: normal;
         }
+        .error {
+          color: red;
+          font-family: Montserrat;
+          font-size: 1.6rem;
+          font-style: italic;
+          font-weight: 700;
+          line-height: normal;
+        }
         .confirm-instruction {
           display: flex;
           align-items: center;
@@ -202,6 +207,29 @@
         .btn {
           width: 100%;
           cursor: pointer;
+        }
+      }
+      .btn-reg {
+        border: none;
+        border-radius: 4px;
+        background: linear-gradient(
+          270deg,
+          #903aff 0%,
+          #d434fe 56.42%,
+          #ff26b9 99.99%,
+          #fe34b9 100%
+        );
+        width: 100%;
+        height: 50px;
+        font-size: 1.6rem;
+        color: white;
+        text-transform: capitalize;
+        cursor: pointer;
+        position: relative;
+        opacity: 0.5;
+
+        &.click {
+          opacity: 1;
         }
       }
     }
@@ -291,7 +319,7 @@
           display: none;
         }
 
-        .white-star-registeration-form{
+        .white-star-registeration-form {
           display: none;
         }
       }

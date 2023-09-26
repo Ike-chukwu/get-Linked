@@ -7,8 +7,8 @@ import fb from "../../images/Vector-1.png";
 import twitter from "../../images/twitter.png";
 import ig from "../../images/mdi_instagram.png";
 import linkedin from "../../images/ri_linkedin-fill.png";
-import Button from "../Button/Button";
 import Input from "../Input/Input";
+import { useNavigate } from "react-router-dom";
 
 const ContactContent = () => {
   const [contactDetails, setContactDetails] = useState({
@@ -17,7 +17,9 @@ const ContactContent = () => {
     Message: "",
     Number: "",
   });
-
+  const [loading, setLoading] = useState(true);
+  const [error, setErrorMessage] = useState();
+  const navigate = useNavigate();
   const inputFields = [
     {
       id: 0,
@@ -64,11 +66,43 @@ const ContactContent = () => {
   const inputChangeHandler = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    console.log(e.target);
     setContactDetails({
       ...contactDetails,
       [name]: value,
     });
+  };
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+      email: contactDetails.Mail,
+      phone_number: contactDetails.Number,
+      first_name: contactDetails.FirstName,
+      message: contactDetails.Message,
+    });
+
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
+
+    fetch("https://backend.getlinked.ai/hackathon/contact-form", requestOptions)
+      .then((response) => response.text())
+      .then((result) => {
+        console.log(result);
+        setLoading(false);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log("error", error);
+        setErrorMessage(error.message);
+        setLoading(false);
+      });
   };
 
   return (
@@ -106,7 +140,7 @@ const ContactContent = () => {
           </div>
         </div>
 
-        <div className="right-form">
+        <form className="right-form" onSubmit={submitForm}>
           <img src={topStar} className="faded-star" alt="" />
           <img src={topStar} className="whitish-star" alt="" />
           <img src={pinkStar} className="pinkish-star" alt="" />
@@ -134,11 +168,10 @@ const ContactContent = () => {
               />
             );
           })}
-          {/* <input type="text" className="input-field" />
-          <input type="text" className="input-field" />
-          <textarea type="text" className="input-field" rows={50} /> */}
+
+          {error ? <p className="error-message">{error}!</p> : null}
           <div className="btn-container-second">
-            <Button>submit</Button>
+            <button className="btn-contact">submit</button>
           </div>
 
           <div className="social-links">
@@ -150,7 +183,7 @@ const ContactContent = () => {
               <img className="logo-icon" src={linkedin} alt="" />
             </div>
           </div>
-        </div>
+        </form>
       </section>
     </div>
   );

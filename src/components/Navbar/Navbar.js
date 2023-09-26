@@ -35,7 +35,7 @@ const Navbar = () => {
           <span className="link">FAQS</span>
           <Link
             to="/contact"
-            style={{ textDecoration: "none" }}
+            style={{ textDecoration: "none", position:"relative" }}
             onClick={() => setNavBarActive(false)}
           >
             <span

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./RegisterContent.scss";
 import topStar from "../../images/star.png";
 import rightStar from "../../images/star-1.png";
@@ -18,12 +18,18 @@ const RegisterContent = () => {
   const [registrationDetails, setRegistrationDetails] = useState({
     teamsName: "",
     number: "",
-    name: "",
+    email: "",
     projectTopic: "",
-    category: "News",
-    size: "Big",
+    category: 1,
+    size: 5,
     checkBoxState: false,
   });
+  const [categories, setCategories] = useState();
+  const [sizes, setSizes] = useState([5, 10, 20]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState();
+  const [pdLoading, setPostDataLoading] = useState(true);
+  const [pdErrorState, setPostDataErrorState] = useState();
 
   // refs for dropdowns
   const sizeRef = useRef();
@@ -91,10 +97,10 @@ const RegisterContent = () => {
   //function that runs when the select dropdown is clicked
   const firstSelectHandler = (e) => {
     const value = e.target.value;
-    console.log(value);
+    const categoryID = categories.find((cat) => cat.name == value).id;
     setRegistrationDetails({
       ...registrationDetails,
-      category: value,
+      category: categoryID,
     });
   };
 
@@ -118,17 +124,80 @@ const RegisterContent = () => {
   //function that is triggered when the submit button is clicked
   const submitForm = (e) => {
     e.preventDefault();
-    if (!registrationDetails.checkBoxState) {
-      return;
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+      email: registrationDetails.email,
+      phone_number: registrationDetails.number,
+      team_name: registrationDetails.teamsName,
+      group_size: registrationDetails.size,
+      project_topic: registrationDetails.projectTopic,
+      category: registrationDetails.category,
+      privacy_poclicy_accepted: registrationDetails.checkBoxState,
+    });
+
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
+
+    fetch(
+      " https://backend.getlinked.ai/hackathon/registration",
+      requestOptions
+    )
+      .then((response) => response.text())
+      .then((result) => {
+        console.log(result);
+        setPostDataLoading(false);
+      })
+      .catch((error) => {
+        console.log("error", error);
+        setPostDataLoading(false);
+        setPostDataErrorState(error.message);
+      });
+  };
+
+  //function that fetches categories from the api
+  const fetchCategories = async () => {
+    try {
+      const data = await fetch(
+        " https://backend.getlinked.ai/hackathon/categories-list"
+      );
+      if (!data.ok) {
+        throw "Api request failed";
+      }
+      const result = await data.json();
+      setCategories(result);
+      setLoading(false);
+    } catch (error) {
+      setError(error.message);
+      setLoading(false);
     }
   };
 
+  useEffect(() => {
+    fetchCategories();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error occured</div>;
   return (
     <div className="register-parent">
-      <Link to="/">
-        <img src={congrats} alt="" className="congrats" />
-      </Link>
-      <section className="register-container">
+      {!pdLoading && !pdErrorState && (
+        <Link to="/">
+          <img src={congrats} alt="" className="congrats" />
+        </Link>
+      )}
+      <section
+        className={
+          !pdLoading && !pdErrorState
+            ? "register-container disappear"
+            : "register-container"
+        }
+      >
         <h1 className="registration-heading-text-one">register</h1>
         <div className="register-left-hand">
           <img src={topStar} className="faded-white-register" alt="" />
@@ -137,7 +206,7 @@ const RegisterContent = () => {
           <img src={leftFlair} className="left-flair-register" alt="" />
           <img src={sittingMan} className="main-img" alt="" />
         </div>
-        <form className="right-reg-form">
+        <form className="right-reg-form" onSubmit={submitForm}>
           <img
             src={topStar}
             className="faded-white-registeration-form"
@@ -213,8 +282,15 @@ const RegisterContent = () => {
                   ref={sizeRef}
                   onChange={(e) => firstSelectHandler(e)}
                 >
-                  <option value="category">Select your category</option>
-                  <option value="sports">Select your category</option>
+                  {categories?.map((category) => (
+                    <option
+                      key={category.id}
+                      value={category.name}
+                      style={{ color: "white", background: "#1C162F" }}
+                    >
+                      {category.name}
+                    </option>
+                  ))}
                 </select>{" "}
               </div>
               <div className="input-detail">
@@ -224,8 +300,15 @@ const RegisterContent = () => {
                   ref={categoryRef}
                   onChange={(e) => secondSelectHandler(e)}
                 >
-                  <option value="grp-size">Select</option>
-                  <option value="grp-new">Select</option>
+                  {sizes.map((size) => (
+                    <option
+                      style={{ color: "white", background: "#1C162F" }}
+                      key={size}
+                      value={size}
+                    >
+                      {size}
+                    </option>
+                  ))}
                 </select>
               </div>
             </div>
@@ -238,12 +321,20 @@ const RegisterContent = () => {
                 className="checkbox"
                 checked={registrationDetails.checkBoxState}
                 onChange={handleCheckboxChange}
+                style={{ position: "relative", cursor: "ponter" }}
               />
               <p className="confirm-text">
                 I agreed with the event terms and conditions and privacy policy
               </p>
             </div>
-            <Button>register now</Button>
+            <button
+              className={
+                registrationDetails.checkBoxState ? "btn-reg click" : "btn-reg"
+              }
+            >
+              register now
+            </button>
+            {pdErrorState ? <p className="error">{pdErrorState}</p> : null}
           </div>
         </form>
       </section>
